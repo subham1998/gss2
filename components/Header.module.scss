@@ -1,0 +1,46 @@
+.header {
+    height: 92px;
+    border-bottom: 2px solid #2fbcd1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .name {
+        color: #e76666;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 4px;
+
+        .very-small-screen {
+            display: none;
+            margin-bottom: 0 !important;
+            @media (max-width: 450px) {
+                display: block;
+            }
+        }
+
+        .full-name {
+            margin-bottom: 0 !important;
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+        
+        .face {
+            border-radius: 50%;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        gap: 16px;
+        .icon {
+            transition: 0.3s all ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.youtube {
+    width: 100%;
+}
+
+.shadow {
+    cursor: pointer;
+    background-color: black;
+    width: calc(100% - 24px);
+    height: 600px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    &:hover {
+        opacity: 0.2;
+        ~.icon {
+            opacity: 1;
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.articles {
+    height: 600px;
+    overflow: auto;
+}
