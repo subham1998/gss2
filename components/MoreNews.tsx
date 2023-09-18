@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NewsIcon from '../public/news-icon.svg'
-import NewsPlaceHolder from '../public/placeholder-news.jpg'
+import NewsPlaceHolder from '../public/landscape-placeholder-svgrepo-com.svg'
 import styles from './MoreNews.module.scss'
 import Link from "next/link";
 import SectionalHeader from "./SectionalHeaders";
@@ -14,7 +14,7 @@ export default function MoreNews() {
                     <div className={`card ${styles.card}`}>
                         <Image className={`card-img-top ${styles['main-news-image']}`} src={NewsPlaceHolder} alt="Card image cap" />
                         <div className={`card-body ${styles['card-body']}`}>
-                            <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ export default function MoreNews() {
                             <div className={`card ${styles.card}`}>
                                 <Image className={`card-img-top ${styles['secondary-news-image']}`} src={NewsPlaceHolder} alt="Card image cap" />
                                 <div className={`card-body ${styles['card-body']}`}>
-                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ export default function MoreNews() {
                             <div className={`card ${styles.card}`}>
                                 <Image className={`card-img-top ${styles['secondary-news-image']}`} src={NewsPlaceHolder} alt="Card image cap" />
                                 <div className={`card-body ${styles['card-body']}`}>
-                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export default function MoreNews() {
                             <div className={`card ${styles.card}`}>
                                 <Image className={`card-img-top ${styles['secondary-news-image']}`} src={NewsPlaceHolder} alt="Card image cap" />
                                 <div className={`card-body ${styles['card-body']}`}>
-                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className={`card-text ${styles['card-text']}`}>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
                                 </div>
                             </div>
                         </div>
