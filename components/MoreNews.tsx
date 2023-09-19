@@ -2,7 +2,6 @@ import Image from "next/image";
 import NewsIcon from '../public/news-icon.svg'
 import NewsPlaceHolder from '../public/landscape-placeholder-svgrepo-com.svg'
 import styles from './MoreNews.module.scss'
-import Link from "next/link";
 import SectionalHeader from "./SectionalHeaders";
 
 export default function MoreNews() {

@@ -16,6 +16,7 @@
         .very-small-screen {
             display: none;
             margin-bottom: 0 !important;
+
             @media (max-width: 450px) {
                 display: block;
             }
@@ -23,24 +24,29 @@
 
         .full-name {
             margin-bottom: 0 !important;
+
             @media (max-width: 450px) {
                 display: none;
             }
         }
-        
+
         .face {
             border-radius: 50%;
         }
     }
 
-    .social-media {
+    .header-actions {
         display: flex;
-        gap: 16px;
-        .icon {
-            transition: 0.3s all ease-in-out;
-            &:hover {
-                transform: scale(1.5);
-            }
+        gap: 8px;
+
+        .download-app {
+            gap: 4px;
+            padding-right: 4px;
+            border-right: 1px solid black;
+        }
+
+        .login-signup {
+            gap: 4px
         }
     }
 }

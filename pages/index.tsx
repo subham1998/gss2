@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import NewsCarousel from '@/components/NewsCarousel'
 import MoreNews from '@/components/MoreNews'
 import TuneIn from '@/components/TuneIn'
+import MediaCarousel from '@/components/MediaCarousel'
+import Actions from '@/components/Actions'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +17,8 @@ export default function Home() {
         <Header></Header>
         <NewsCarousel></NewsCarousel>
         <MoreNews></MoreNews>
-        <TuneIn></TuneIn>
+        <MediaCarousel></MediaCarousel>
+        <Actions></Actions>
       </div>
     </>
   )
