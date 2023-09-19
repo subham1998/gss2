@@ -4,13 +4,15 @@ import Instagram from '../public/intsagram-logo.png'
 import FaceBook from '../public/facebook-logo.png'
 import Twitter from '../public/twitter-logo.png'
 import Image from 'next/image'
-import face from '../public/face.jpg'
+import menuOpenIcon from '../public/hamburger.svg'
+import Menu from './Menu'
+import { useState } from 'react'
 
 const socialMediaLinks = [
     {
         name: 'instagram',
         image: Instagram,
-        link: "https://www.instagram.com/gssjodhpur/?hl=en" 
+        link: "https://www.instagram.com/gssjodhpur/?hl=en"
     },
     {
         name: 'facebook',
@@ -25,9 +27,18 @@ const socialMediaLinks = [
 ]
 
 export default function Header() {
-    return <div className={styles.header}>
+    const [menuOpenState, setMenuOpenState] = useState(false);
+
+    const handleOpenCloseMenu = () => {
+        setMenuOpenState((prevValue: boolean) => !prevValue)
+    }
+
+
+    return (<div className='position-relative'>
+        <Menu menuOpen={menuOpenState}></Menu>
+        <div className={styles.header}>
         <Link href="/" className={styles.name}>
-            <Image src={face} alt="Gajendra Singh Shekhawat" height={40} width={40} className={styles.face}></Image>
+            <Image src={menuOpenIcon} alt="open-menu" height={40} width={40} onClick={handleOpenCloseMenu}></Image>
             <h1 className={styles['full-name']}>
                 <span>Gajendra</span>&nbsp;
                 <span>Singh</span>&nbsp;
@@ -37,12 +48,5 @@ export default function Header() {
                 <span><b>GSS</b></span>
             </h1>
         </Link>
-        <div className={`mb-2 ${styles['social-media']}`}>
-            {socialMediaLinks.map((media, index) => {
-                return <Link href={media.link} target='_blank' key={index}>
-                <Image src={media.image} alt={media.name} width={32} height={32} className={styles.icon}></Image>
-            </Link>
-            })}
-        </div>
-    </div>
+    </div></div>)
 }
