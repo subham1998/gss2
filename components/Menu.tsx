@@ -56,12 +56,12 @@ const socialMediaLinks = [
 
 export default function Menu({ menuOpen }: { menuOpen: boolean }) {
     return <>
-        <div className={`container position-absolute py-2 ${menuOpen ? `d-block ${styles['menu-open']}` : 'd-none'}  ${styles.container}`}>
+        <div className={`container position-absolute ${menuOpen ? styles['menu-open'] : ''}  ${styles.container}`}>
             <div className={styles["menu-container"]}>
                 {menuCategories.map((_category, index) => {
                     return <>
                         <div key={index}>
-                            <ul className={`${styles["menu-category"]} ${menuOpen ? 'd-block' : 'd-none'}`}>
+                            <ul className={`${styles["menu-category"]}`}>
                                 <li className={`mb-1 ${styles["title"]}`}>{_category.label}</li>
                                 {_category.items.map((_item, i) => {
                                     return <>

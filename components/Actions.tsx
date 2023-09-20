@@ -18,7 +18,7 @@ const data = [
     {
         label: 'Speeches',
         image: Speeches,
-        link: '#'
+        link: '/speeches'
     },
     {
         label: 'Gallery',
@@ -48,7 +48,7 @@ export default function Actions() {
             {data.map((_data, index) => {
                 return <>
                     <div className='col-lg-4 col-md-6 col-sm-12 py-4' key={index}>
-                        <Link href={_data.link} target='_blank' className={`d-flex flex-column align-items-center border-right ${styles['action-items']} ${styles[_data.label.toLowerCase().split(' ').join('-')]}`}>
+                        <Link href={_data.link} target='_self' className={`d-flex flex-column align-items-center border-right ${styles['action-items']} ${styles[_data.label.toLowerCase().split(' ').join('-')]}`}>
                             <Image src={_data.image} alt={_data.label} width={100} height={100}></Image>
                             <span>{_data.label}</span>
                         </Link>

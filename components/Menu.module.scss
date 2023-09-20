@@ -1,12 +1,15 @@
 .container {
     z-index: 1000;
     top: 92px;
-    height: 0;
+    max-height: 0;
+    padding-block: 0;
     background: rgba(46, 49, 146, .9);
-    transition: height 3s ease-in-out;
+    transition: max-height 0.6s ease-in-out, padding-block 0.6s ease-in-out;
+    overflow: hidden;
 
     &.menu-open {
-        height: auto;
+        max-height: 500px;
+        padding-block: 16px;
     }
 
     .menu-container {
