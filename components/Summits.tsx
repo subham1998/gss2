@@ -48,7 +48,7 @@ export default function Summits() {
     };
     return <>
         <div className={`my-4`}>
-            <SectionalHeader image={Summit} link='#' title="International Visits & Summits" ></SectionalHeader>
+            <SectionalHeader image={Summit} link='#' title="Domestic & International Visits" ></SectionalHeader>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect} interval={3000} pause={false} className='mt-4'>
             {data.map((slide, i) => {

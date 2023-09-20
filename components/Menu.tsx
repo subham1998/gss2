@@ -16,11 +16,11 @@ const menuCategories = [
     },
     {
         label: 'Achievements',
-        items: [{ label: 'Constituency', link: '#' }, { label: 'Ministry', link: "#" }]
+        items: [{ label: 'Constituency', link: '#' }, { label: 'Ministry', link: "#" }, { label: 'Work Done in Constituency', link: '#' }]
     },
     {
         label: 'Connect',
-        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Merchandise', link: '#' }, { label: 'e-greetings', link: '#' }, { label: 'Contact US', link: '#' }, { label: 'Write to GSS', link: '#' }, { label: 'Part of his Team', link: '#' }]
+        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Merchandise', link: '#' }, { label: 'e-greetings', link: '#' }, { label: 'Contact US', link: '#' }, { label: 'Write to GSS', link: '#' }, { label: 'Be Part of GSS Family', link: '#' }]
     },
     {
         label: 'GSS Resources',
@@ -54,7 +54,7 @@ const socialMediaLinks = [
     }
 ]
 
-export default function Menu({ menuOpen }: {menuOpen: boolean}) {
+export default function Menu({ menuOpen }: { menuOpen: boolean }) {
     return <>
         <div className={`container position-absolute py-2 ${menuOpen ? `d-block ${styles['menu-open']}` : 'd-none'}  ${styles.container}`}>
             <div className={styles["menu-container"]}>
@@ -77,10 +77,10 @@ export default function Menu({ menuOpen }: {menuOpen: boolean}) {
             </div>
             <div className={`mt-2 ${styles["social-media-icons"]}`}>
                 {socialMediaLinks.map((media, index) => {
-                return <Link href={media.link} target='_blank' key={index}>
-                    <Image src={media.image} alt={media.name} width={32} height={32} className={styles.icon}></Image>
-                </Link>
-            })}
+                    return <Link href={media.link} target='_blank' key={index}>
+                        <Image src={media.image} alt={media.name} width={32} height={32} className={styles.icon}></Image>
+                    </Link>
+                })}
             </div>
         </div>
     </>

@@ -8,7 +8,7 @@ import TuneIn from '@/components/TuneIn'
 import MediaCarousel from '@/components/MediaCarousel'
 import Actions from '@/components/Actions'
 import GovernanceCarousel from '@/components/GovernanceCarousel'
-import GlobalRecognition from '@/components/GlobalRecognition'
+import ConstituencyWork from '@/components/ConstituencyWork'
 import Summits from '@/components/Summits'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,7 +25,7 @@ export default function Home() {
         <GovernanceCarousel></GovernanceCarousel>
         <div className='row'>
           <div className='col-lg-6 col-md-12'>
-            <GlobalRecognition></GlobalRecognition>
+            <ConstituencyWork></ConstituencyWork>
           </div>
           <div className='col-lg-6 col-md-12'>
             <Summits></Summits>

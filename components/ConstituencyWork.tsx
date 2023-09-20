@@ -1,5 +1,5 @@
 import SectionalHeader from "./SectionalHeaders";
-import Global from "../public/earth.svg"
+import Constituency from "../public/constituency.svg"
 import { Carousel } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
@@ -40,7 +40,7 @@ const data = [
     }
 ]
 
-export default function GlobalRecognition() {
+export default function ConstituencyWork() {
 
     const [index, setIndex] = useState(0);
     const handleSelect = (selectedIndex: SetStateAction<number>, e: any) => {
@@ -48,7 +48,7 @@ export default function GlobalRecognition() {
     };
     return <>
         <div className={`my-4`}>
-            <SectionalHeader image={Global} link='#' title="Global Recognition" ></SectionalHeader>
+            <SectionalHeader image={Constituency} link='#' title="Constituency Work" ></SectionalHeader>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect} interval={3000} pause={false} className='mt-4'>
             {data.map((slide, i) => {
