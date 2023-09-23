@@ -11,7 +11,7 @@ export default function Biography() {
             <i className="fa-solid fa-book"></i>
         </PageHeader>
         <div className="text-dark">
-            <Image src={biograhyTwo} alt="Shri Gajendra Singh Sekhawat" width={400} height={600} className="float-start me-4 rounded"></Image>
+            <Image src={biograhyTwo} alt="Shri Gajendra Singh Sekhawat" width={400} height={600} className={`float-start me-4 rounded ${styles.image}`}></Image>
             <div className={`${styles['text']}`}>
                 MR. GAJENDRA SINGH SHEKHAWAT is an Indian Politician who is currently serving as Cabinet Minister for Jal Shakti.
                 As a Member of Parliament representing Jodhpur and having won the Indian General Elections, 2019 with a margin of 2,70,000 votes, Mr. Gajendra Singh Shekhawat is seen as a member of the youth brigade, a symbol of a farmer who is progressive and a technocrat, the reason why he has been exclusively handpicked by the Prime Minister with a responsibility to align policy objectives with dynamic optimism and work ethics.
