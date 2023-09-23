@@ -22,11 +22,15 @@
 
         .menu-category {
             list-style: none;
-            color: black;
+            color: black !important;
 
             .title {
                 font-weight: bold;
                 color: rgb(248, 117, 117);
+            }
+
+            .menu-item {
+                color: inherit !important;
             }
         }
     }

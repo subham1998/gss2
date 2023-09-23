@@ -66,7 +66,7 @@ export default function Menu({ menuOpen }: { menuOpen: boolean }) {
                                 {_category.items.map((_item, i) => {
                                     return <>
                                         <li key={i}>
-                                            <Link className="menu-item" href={_item.link} target={_item.target || '_blank'}>{_item.label}</Link>
+                                            <Link className={`${styles['menu-item']}`} href={_item.link} target={_item.target || '_blank'}>{_item.label}</Link>
                                         </li>
                                     </>
                                 })}

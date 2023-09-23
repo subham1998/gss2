@@ -1,6 +1,7 @@
 .action-items {
     border-right: 1px solid rgb(212, 210, 210);
     gap: 4px;
+    color: black !important;
 
     @media (min-width: 0) and (max-width: 767.98px) {
         border-right: 0
