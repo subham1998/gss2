@@ -1,0 +1,105 @@
+%icon-position {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    display: flex;
+    margin-top: 32px;
+
+    .header-name {
+        display: flex;
+        flex-grow: 1;
+        border-bottom-color: #e76666 !important;
+        padding-left: 8px;
+        align-items: center;
+
+        &:hover {
+            color: white !important;
+            background-color: #e76666;
+            transition: background-color 1000ms ease-in-out, color 500ms ease-in-out;
+        }
+    }
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+
+    .sm-list {
+        display: flex;
+        gap: 8px;
+
+        a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #fff;
+            transition: all .3s;
+            font-size: 1.5em;
+
+
+            &.facebook {
+                background-color: #3B5998;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #3B5998;
+                    border: 2px solid #3B5998;
+
+                }
+
+                i {
+                    @extend %icon-position
+                }
+            }
+
+            &.instagram {
+                background-color: #dd2553;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #dd2553;
+                    border: 2px solid #dd2553;
+
+                }
+
+                i {
+                    @extend %icon-position
+                }
+            }
+
+            &.whatsapp {
+                background-color: rgb(10, 63, 0);
+
+                &:hover {
+                    background-color: #fff;
+                    color: rgb(10, 63, 0);
+                    border: 2px solid rgb(10, 63, 0);
+
+                }
+
+                i {
+                    @extend %icon-position
+                }
+            }
+
+            &.twitter {
+                background-color: #1E3050;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #1E3050;
+                    border: 2px solid #1E3050;
+
+                }
+
+                i {
+                    @extend %icon-position
+                }
+            }
+        }
+    }
+}

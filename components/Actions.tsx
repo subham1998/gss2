@@ -13,7 +13,7 @@ const data = [
     {
         label: 'Infographics',
         image: Infographic,
-        link: '#'
+        link: '/infographics'
     },
     {
         label: 'Speeches',

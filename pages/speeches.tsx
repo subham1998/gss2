@@ -4,11 +4,11 @@ import SpeechesOne from '../public/speeches-1.jpg'
 import SpeechesTwo from '../public/Speeches2.jpg'
 import SpeechesThree from '../public/speeches-3.jpg'
 import SpeechesFour from '../public/speeches-4.jpg'
-import Speeches from '../public/microphone-54.svg';
+import Speech from '../public/microphone-54.svg';
 import styles from '../styles/speeches.module.scss'
 import Link from 'next/link';
 
-export default function News() {
+export default function Speeches() {
     const news = [
         {
             title: `सनातन विरोधियों पर गरजे Gajendra Singh Shekhawat | Udhayanidhi Stalin`,
@@ -43,7 +43,7 @@ export default function News() {
     return <>
         <div className='container mb-4'>
             <h5 className={`${styles.header}`}>
-                <Image src={Speeches} alt="speeches" width={32} height={32} />
+                <Image src={Speech} alt="speeches" width={32} height={32} />
                 <div className={`border-bottom border-2 text-dark ${styles['header-name']}`}>
                     Speeches
                 </div>

@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    margin-top: 32px;
+
+    .header-name {
+        display: flex;
+        flex-grow: 1;
+        border-bottom-color: #e76666 !important;
+        padding-left: 8px;
+        align-items: center;
+
+        &:hover {
+            color: white !important;
+            background-color: #e76666;
+            transition: background-color 1000ms ease-in-out, color 500ms ease-in-out;
+        }
+    }
+
+    .icon {
+        font-size: 32px;
+        color: #ea6666;
+
+        i {
+            width: 32px;
+        }
+    }
+}
+
+.text {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+}

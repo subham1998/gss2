@@ -8,7 +8,7 @@ import Image from 'next/image'
 const menuCategories = [
     {
         label: 'About GSS',
-        items: [{ label: "Biography", link: '#' }, { label: "Constituency", link: '#' }, { label: "Jal Jeevan Mission", link: '#' }, { label: "Ministry of Jal Shakti", link: '#' }, { label: "Vision", link: '#' }]
+        items: [{ label: "Biography", link: '/biography', target: '_Self' }, { label: "Constituency", link: '#' }, { label: "Jal Jeevan Mission", link: 'https://ejalshakti.gov.in/jjmreport/JJMIndia.aspx' }, { label: "Ministry of Jal Shakti", link: 'https://jalshakti-dowr.gov.in/' }, { label: "Vision", link: '#' }]
     },
     {
         label: 'News',
@@ -66,7 +66,7 @@ export default function Menu({ menuOpen }: { menuOpen: boolean }) {
                                 {_category.items.map((_item, i) => {
                                     return <>
                                         <li key={i}>
-                                            <Link className="menu-item" href={_item.link} target="_blank">{_item.label}</Link>
+                                            <Link className="menu-item" href={_item.link} target={_item.target || '_blank'}>{_item.label}</Link>
                                         </li>
                                     </>
                                 })}
