@@ -19,7 +19,7 @@ export default function Home() {
       <div className='container'>
         <Header></Header>
         <NewsCarousel></NewsCarousel>
-        <MoreNews></MoreNews>
+        {/* <MoreNews></MoreNews> */}
         <MediaCarousel></MediaCarousel>
         <Actions></Actions>
         <GovernanceCarousel></GovernanceCarousel>

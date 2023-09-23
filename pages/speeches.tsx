@@ -7,6 +7,7 @@ import SpeechesFour from '../public/speeches-4.jpg'
 import Speech from '../public/microphone-54.svg';
 import styles from '../styles/speeches.module.scss'
 import Link from 'next/link';
+import PageHeader from '@/components/PageHeaders';
 
 export default function Speeches() {
     const news = [
@@ -42,12 +43,9 @@ export default function Speeches() {
 
     return <>
         <div className='container mb-4'>
-            <h5 className={`${styles.header}`}>
-                <Image src={Speech} alt="speeches" width={32} height={32} />
-                <div className={`border-bottom border-2 text-dark ${styles['header-name']}`}>
-                    Speeches
-                </div>
-            </h5>
+            <PageHeader header="Speeches">
+                <i className="fa-solid fa-microphone"></i>
+            </PageHeader>
             {
                 news.map((_news, i) => {
                     return (<div className={`row border-bottom p-4 border-3 ${styles['news-row']}`} key={i}>

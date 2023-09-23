@@ -3,7 +3,7 @@
     top: 92px;
     max-height: 0;
     padding-block: 0;
-    background: rgba(46, 49, 146, .9);
+    background: rgba(64, 224, 208);
     transition: max-height 0.8s ease-in-out, padding-block 0.8s ease-in-out;
     overflow: hidden;
 
@@ -22,6 +22,7 @@
 
         .menu-category {
             list-style: none;
+            color: black;
 
             .title {
                 font-weight: bold;

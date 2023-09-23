@@ -30,7 +30,7 @@ export default function Header() {
                     <h1 className={styles['full-name']}>
                         <span>Gajendra</span>&nbsp;
                         <span>Singh</span>&nbsp;
-                        <span><b>Shekhawat</b></span>
+                        <span>Shekhawat</span>
                     </h1>
                     <h1 className={styles['very-small-screen']}>
                         <span><b>GSS</b></span>

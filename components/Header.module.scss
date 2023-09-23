@@ -38,6 +38,14 @@
             -o-transition: .35s ease-in-out;
             transition: .35s ease-in-out;
 
+            @media (max-width: 850px) {
+                height: 5px;
+            }
+
+            @media (max-width: 600px) {
+                height: 4px;
+            }
+
             &:nth-child(1) {
                 top: 0px;
             }
@@ -83,21 +91,21 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        padding-bottom: 4px;
 
         .very-small-screen {
             display: none;
             margin-bottom: 0 !important;
 
-            @media (max-width: 450px) {
+            @media (max-width: 600px) {
                 display: block;
             }
         }
 
         .full-name {
             margin-bottom: 0 !important;
+            font-weight: 600;
 
-            @media (max-width: 450px) {
+            @media (max-width: 600px) {
                 display: none;
             }
         }
@@ -119,6 +127,12 @@
 
         .login-signup {
             gap: 4px
+        }
+
+        @media (max-width: 992px) {
+            span {
+                display: none;
+            }
         }
     }
 }

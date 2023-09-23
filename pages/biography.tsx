@@ -2,17 +2,14 @@ import Image from "next/image"
 import styles from "../styles/biography.module.scss"
 import biograhyOne from '../public/biography-1.jpg';
 import biograhyTwo from '../public/biography-2.jpg';
+import Link from "next/link";
+import PageHeader from "@/components/PageHeaders";
 
 export default function Biography() {
     return (<div className="container mb-4">
-        <h5 className={`${styles.header}`}>
-            <div className={`${styles.icon}`}>
-                <i className="fa-solid fa-book"></i>
-            </div>
-            <div className={`border-bottom border-2 text-dark ${styles['header-name']}`}>
-                Biography
-            </div>
-        </h5>
+        <PageHeader header="Biography">
+            <i className="fa-solid fa-book"></i>
+        </PageHeader>
         <div className="text-dark">
             <Image src={biograhyTwo} alt="Shri Gajendra Singh Sekhawat" width={400} height={600} className="float-start me-4 rounded"></Image>
             <div className={`${styles['text']}`}>
@@ -24,6 +21,6 @@ export default function Biography() {
                 He was also instrumental in furthering the impact of civil defense by setting up 40 schools and 4 hostels along the Indo-Pak border. Extremely approachable on Social Media, he is massively popular on Twitter, Facebook and Youtube. Also has the distinction of being the most followed Indian Politician on Quora. His Quora profile has more than 70,000 followers and his answers on the social media platform has been viewed a record 6.8 Million times, more than that of former U.S.A President Barrack Obama.
                 As an example worth emulation, he led an internship program that leveraged his cult following on Quora to create a nationwide youth led development initiative, something that impressed the Prime Minister because of its unique approach towards problem solving for public policy issues and challenges.
             </div>
-        </div>
+            P</div>
     </div>)
 }

@@ -5,6 +5,7 @@ import PipedWaterSupply from '../public/Infographics.png'
 import FaceBook from '../public/Facebook_icon.webp';
 import Share from '../public/share.svg';
 import Link from 'next/link';
+import PageHeader from '@/components/PageHeaders';
 
 const infographics = [
     {
@@ -21,12 +22,20 @@ const infographicRows = infographics.reduce((rows: any[], key, index) => {
 export default function Infographics() {
     return <>
         <div className="container mb-4">
-            <h5 className={`${styles.header}`}>
+            {/* <h5 className={`${styles.header}`}>
                 <Image src={Infographic} alt="speeches" width={32} height={32} />
                 <div className={`border-bottom border-2 text-dark ${styles['header-name']}`}>
                     Infographics
+                    <div className={`${styles.icon} ${styles.home}`}>
+                        <Link href="/">
+                            <i className="fa-solid fa-house"></i>
+                        </Link>
+                    </div>
                 </div>
-            </h5>
+            </h5> */}
+            <PageHeader header="Infographics">
+                <i className="fa-solid fa-chart-simple"></i>
+            </PageHeader>
             <div className='mt-4'>
                 {infographicRows.map((row: typeof infographics, index) => {
                     return (<div className='row' key={index}>
