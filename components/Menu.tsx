@@ -36,27 +36,9 @@ const menuCategories = [
     }
 ]
 
-const socialMediaLinks = [
-    {
-        name: 'instagram',
-        image: Instagram,
-        link: "https://www.instagram.com/gssjodhpur/?hl=en"
-    },
-    {
-        name: 'facebook',
-        image: FaceBook,
-        link: 'https://www.facebook.com/mpjodhpur/'
-    },
-    {
-        name: 'X',
-        image: Twitter,
-        link: 'https://twitter.com/gssjodhpur?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
-    }
-]
-
 export default function Menu({ menuOpen }: { menuOpen: boolean }) {
     return <>
-        <div className={`container position-absolute ${menuOpen ? styles['menu-open'] : ''}  ${styles.container}`}>
+        <div className={`container position-absolute bg-dark bg-gradient ${menuOpen ? styles['menu-open'] : ''}  ${styles.container}`}>
             <div className={styles["menu-container"]}>
                 {menuCategories.map((_category, index) => {
                     return <>
@@ -73,13 +55,6 @@ export default function Menu({ menuOpen }: { menuOpen: boolean }) {
                             </ul>
                         </div>
                     </>
-                })}
-            </div>
-            <div className={`mt-2 ${styles["social-media-icons"]}`}>
-                {socialMediaLinks.map((media, index) => {
-                    return <Link href={media.link} target='_blank' key={index}>
-                        <Image src={media.image} alt={media.name} width={32} height={32} className={styles.icon}></Image>
-                    </Link>
                 })}
             </div>
         </div>
