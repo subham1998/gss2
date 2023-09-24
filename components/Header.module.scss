@@ -1,3 +1,9 @@
+%icon-position {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .header {
     height: 92px;
     border-bottom: 2px solid #2fbcd1;
@@ -118,6 +124,7 @@
     .header-actions {
         display: flex;
         gap: 8px;
+        align-items: center;
 
         .download-app {
             gap: 4px;
@@ -129,10 +136,116 @@
             gap: 4px
         }
 
-        @media (max-width: 992px) {
-            span {
-                display: none;
+        .social-media-menu {
+            padding-right: 4px;
+            border-right: 1px solid black;
+
+            .face {
+                cursor: pointer;
             }
+
+            .menu {
+                z-index: 10;
+                list-style: none;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 1s ease-in-out;
+                left: -4.5px;
+
+                li {
+                    position: absolute;
+                    top: 0;
+                    transition: top 1s ease-in-out;
+
+                    a {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        text-decoration: none;
+                        color: #fff;
+                        transition: all .3s;
+                        font-size: 1.5em;
+
+                        &.facebook {
+                            background-color: #3B5998;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+
+                        &.instagram {
+                            background-color: #dd2553;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+
+                        &.twitter {
+                            background-color: #1E3050;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+
+                        &.quora {
+                            background-color: #B92B27;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+
+                        &.whatsapp {
+                            background-color: rgb(10, 63, 0);
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+
+                        &.live {
+                            background-color: #f70b03;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+
+                            i {
+                                @extend %icon-position
+                            }
+                        }
+                    }
+
+                }
+
+                &.open {
+                    overflow: initial;
+                    max-height: 1000px;
+
+                    li {
+                        @for $i from 1 through 6 {
+                            &:nth-child(#{$i}) {
+                                position: relative;
+                                top: calc(10px * #{$i})
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        span {
+            display: none;
         }
     }
 }

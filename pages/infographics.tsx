@@ -22,17 +22,6 @@ const infographicRows = infographics.reduce((rows: any[], key, index) => {
 export default function Infographics() {
     return <>
         <div className="container mb-4">
-            {/* <h5 className={`${styles.header}`}>
-                <Image src={Infographic} alt="speeches" width={32} height={32} />
-                <div className={`border-bottom border-2 text-dark ${styles['header-name']}`}>
-                    Infographics
-                    <div className={`${styles.icon} ${styles.home}`}>
-                        <Link href="/">
-                            <i className="fa-solid fa-house"></i>
-                        </Link>
-                    </div>
-                </div>
-            </h5> */}
             <PageHeader header="Infographics">
                 <i className="fa-solid fa-chart-simple"></i>
             </PageHeader>
@@ -43,9 +32,6 @@ export default function Infographics() {
                             return (<div className={`col-lg-4 col-md-6 col-sm-12 p-4 border border-2 rounded`} key={graphic.caption}>
                                 <Image src={graphic.image} alt={graphic.caption} className='w-100 h-auto'></Image>
                                 <div className={`${styles.more} mt-4`}>
-                                    {/* <div className='border border-2 border-dark rounded-circle bg-light bg-gradient p-2'>
-                                        <Image src={Share} alt="Share" width={24} height={24}></Image>
-                                    </div> */}
                                     <div className={`${styles['sm-list']}`}>
                                         <Link href="#" className={`${styles.facebook} d-inline-block position-relative`}>
                                             <i className='fab fa-facebook-f position-absolute'></i>

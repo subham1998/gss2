@@ -1,9 +1,9 @@
 .container {
-    z-index: 1000;
+    z-index: 5;
     top: 92px;
     max-height: 0;
     padding-block: 0;
-    background: rgba(64, 224, 208);
+    // background: rgba(64, 224, 208);
     transition: max-height 0.8s ease-in-out, padding-block 0.8s ease-in-out;
     overflow: hidden;
 
@@ -22,7 +22,7 @@
 
         .menu-category {
             list-style: none;
-            color: black !important;
+            color: #fff !important;
 
             .title {
                 font-weight: bold;
