@@ -1,9 +1,5 @@
-import Instagram from '../public/intsagram-logo.png'
-import FaceBook from '../public/facebook-logo.png'
-import Twitter from '../public/twitter-logo.png'
 import Link from "next/link"
 import styles from './Menu.module.scss';
-import Image from 'next/image'
 
 const menuCategories = [
     {

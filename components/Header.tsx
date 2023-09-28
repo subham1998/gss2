@@ -6,9 +6,11 @@ import Twitter from '../public/twitter-logo.png'
 import Image from 'next/image'
 import Face from '../public/face.jpg'
 import Menu from './Menu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+    const router = useRouter();
     const [menuOpenState, setMenuOpenState] = useState(false);
     const [socialMediamenuOpenState, setSocialMediaMenuOpenState] = useState(false);
 
@@ -19,6 +21,12 @@ export default function Header() {
     const socialMediaMenuOpen = () => {
         setSocialMediaMenuOpenState((prevValue: boolean) => !prevValue)
     }
+
+    useEffect(() => {
+        router.events.on('hashChangeStart', handleOpenCloseMenu);
+
+        return () => router.events.off('hashChangeStart', handleOpenCloseMenu);
+    }, [router.events]);
 
 
     return (<div className='position-relative'>
