@@ -6,9 +6,11 @@ import Twitter from '../public/twitter-logo.png'
 import Image from 'next/image'
 import Face from '../public/face.jpg'
 import Menu from './Menu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+    const router = useRouter();
     const [menuOpenState, setMenuOpenState] = useState(false);
     const [socialMediamenuOpenState, setSocialMediaMenuOpenState] = useState(false);
 
@@ -20,11 +22,17 @@ export default function Header() {
         setSocialMediaMenuOpenState((prevValue: boolean) => !prevValue)
     }
 
+    useEffect(() => {
+        router.events.on('hashChangeStart', handleOpenCloseMenu);
+
+        return () => router.events.off('hashChangeStart', handleOpenCloseMenu);
+    }, [router.events]);
+
 
     return (<div className='position-relative'>
         <Menu menuOpen={menuOpenState}></Menu>
         <div className={styles.header}>
-            <div className='d-flex align-items-center'>
+            <div className='d-flex align-items-center mb-2'>
                 <div className={`${styles["nav-icon"]} ${menuOpenState ? styles.open : ''}`} onClick={handleOpenCloseMenu}>
                     <span></span>
                     <span></span>
@@ -33,9 +41,7 @@ export default function Header() {
                 <Link href="/" className={styles.name}>
                     {/* <Image src={menuOpenIcon} alt="open-menu" height={40} width={40} onClick={handleOpenCloseMenu}></Image> */}
                     <h1 className={styles['full-name']}>
-                        <span>Gajendra</span>&nbsp;
-                        <span>Singh</span>&nbsp;
-                        <span>Shekhawat</span>
+                        <span>Gajendra Singh Sekhawat</span>
                     </h1>
                     <h1 className={styles['very-small-screen']}>
                         <span><b>GSS</b></span>
@@ -82,10 +88,10 @@ export default function Header() {
                     <span>Download App</span>
                     <Image src={Phone} alt="Download App" width={24} height={24}></Image>
                 </Link>
-                <Link href="#" className={`d-flex text-dark mb-2 ${styles['login-signup']}`}>
+                {/* <Link href="#" className={`d-flex text-dark mb-2 ${styles['login-signup']}`}>
                     <span>Login/Sign Up</span>
                     <Image src={Person} alt="Login/SIgnup" width={24} height={24}></Image>
-                </Link>
+                </Link> */}
             </div>
         </div>
     </div>)

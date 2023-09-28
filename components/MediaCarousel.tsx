@@ -78,7 +78,7 @@ export default function MediaCarousel() {
         setIndex(selectedIndex);
     };
     return <>
-        <div className={`my-4`}>
+        <div id="media-coverage-news" className={`my-4`}>
             <SectionalHeader image={Media} link='/news' title="Media Coverage & News" ></SectionalHeader>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect} interval={3000} pause={false} className='mt-4'>

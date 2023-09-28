@@ -16,11 +16,6 @@ const data = [
         link: '/infographics'
     },
     {
-        label: 'Speeches',
-        image: Speeches,
-        link: '/speeches'
-    },
-    {
         label: 'Gallery',
         image: Gallery,
         link: '#'
@@ -28,11 +23,6 @@ const data = [
     {
         label: 'Write to GSS',
         image: WriteTo,
-        link: '#'
-    },
-    {
-        label: 'Subscribe to Newsletter',
-        image: NewsIcon,
         link: '#'
     },
     {
@@ -47,7 +37,7 @@ export default function Actions() {
         <div className={`row my-4 text-dark border-top border-bottom py-4 ${styles['actions-container']}`}>
             {data.map((_data, index) => {
                 return <>
-                    <div className='col-lg-4 col-md-6 col-sm-12 py-4' key={index}>
+                    <div className='col-lg-6 col-md-12 py-4' key={index}>
                         <Link href={_data.link} target='_self' className={`d-flex flex-column align-items-center border-right ${styles['action-items']} ${styles[_data.label.toLowerCase().split(' ').join('-')]}`}>
                             <Image src={_data.image} alt={_data.label} width={100} height={100}></Image>
                             <span>{_data.label}</span>
