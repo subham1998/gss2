@@ -12,7 +12,7 @@ const menuCategories = [
     },
     {
         label: 'News',
-        items: [{ label: 'News Updates', link: '#' }, { label: 'Media Coverage', link: '#' }, { label: 'Newsletter', link: '#' }, { label: 'Blogs', link: '#' }]
+        items: [{ label: 'Media Coverage & News', link: '#media-coverage-news', target: '_self' }, { label: 'Blogs', link: '#' }]
     },
     {
         label: 'Achievements',
@@ -20,11 +20,11 @@ const menuCategories = [
     },
     {
         label: 'Connect',
-        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Merchandise', link: '#' }, { label: 'e-greetings', link: '#' }, { label: 'Contact US', link: '#' }, { label: 'Write to GSS', link: '#' }, { label: 'Be Part of GSS Family', link: '#' }]
+        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Write to GSS', link: '#' }, { label: 'Be Part of GSS Family', link: '#' }]
     },
     {
         label: 'GSS Resources',
-        items: [{ label: 'Speeches', link: '#' }, { label: 'Interviews', link: '#' }, { label: 'Resoruces about Jodhpur', link: '#' }, { label: 'Policies', link: '#' }, { label: 'Saurya Arpan', link: '#' }]
+        items: [{ label: 'Resoruces about Jodhpur', link: '#' }, { label: 'Policies', link: '#' }, { label: 'Saurya Arpan', link: '#' }]
     },
     {
         label: 'GSS Library',
