@@ -11,8 +11,8 @@ const infographics = [
     {
         image: PipedWaterSupply,
         caption: 'Piped water supply for Aspirational Districts',
-        remoteImageLink: `https://gss2.vercel.app/_next/image?url=%2F_next%2…c%2Fmedia%2FInfographics.f0de314e.png&w=1200&q=75`,
-        facebookLink: `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgss2.vercel.app%2F_next%2Fimage%3Furl%3D%252F_next%25252%25E2%2580%25A6c%252Fmedia%252FInfographics.f0de314e.png%26w%3D1200%26q%3D75&amp;src=sdkpreparse`
+        remoteImageLink: `https://pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg&name=900x900`,
+        facebookLink: `https://www.facebook.com/sharer/sharer.php?u=https%3A//pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg%26name=900x900`
     }
 ]
 
@@ -22,7 +22,7 @@ const infographicRows = infographics.reduce((rows: any[], key, index) => {
 }, [])
 
 const generateTwitterLink = (caption: string, imageLink: string) => {
-    return `https://twitter.com/intent/tweet?text=${encodeURIComponent(caption)}+https://gss2.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInfographics.f0de314e.png&w=1200&q=75`
+    return `https://twitter.com/intent/tweet?text=${encodeURIComponent(caption)}+${imageLink}`
 }
 
 export default function Infographics() {
