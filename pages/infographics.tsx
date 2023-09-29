@@ -12,7 +12,8 @@ const infographics = [
         image: PipedWaterSupply,
         caption: 'Piped water supply for Aspirational Districts',
         remoteImageLink: `https://pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg&name=900x900`,
-        facebookLink: `https://www.facebook.com/sharer/sharer.php?u=https%3A//pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg%26name=900x900`
+        facebookLink: `https://www.facebook.com/sharer/sharer.php?u=https%3A//pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg%26name=900x900`,
+        whatsappLink: `https://api.whatsapp.com/send?text=Piped water supply for Aspirational Districts%0ahttps://pbs.twimg.com/media/F7LBwcraAAAk7VI?format=jpg&name=900x900`
     }
 ]
 
@@ -44,10 +45,10 @@ export default function Infographics() {
                                         </Link>
                                         {/* <Link href="#" className={`${styles.instagram} d-inline-block position-relative`}>
                                             <i className='fab fa-instagram position-absolute'></i>
-                                        </Link>
-                                        <Link href="#" className={`${styles.whatsapp} d-inline-block position-relative`}>
-                                            <i className='fab fa-whatsapp position-absolute'></i>
                                         </Link> */}
+                                        <Link href={graphic.whatsappLink} className={`${styles.whatsapp} d-inline-block position-relative`}>
+                                            <i className='fab fa-whatsapp position-absolute'></i>
+                                        </Link>
                                         <Link href={generateTwitterLink(graphic.caption, graphic.remoteImageLink)} className={`${styles.twitter} d-inline-block position-relative`}>
                                             <i className="fa-brands fa-x-twitter position-absolute"></i>
                                         </Link>
