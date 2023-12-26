@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: ''
+  basePath: '',
+  images: {
+    domains: ['img.youtube.com'],
+  },
 }
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');

@@ -2,6 +2,10 @@ import Image from 'next/image';
 import News1 from '../public/Centre for Sustainable Drinking Water.jpg';
 import NewsIcon from '../public/news-icon.svg'
 import styles from '../styles/News.module.scss'
+import MoreNewsOne from '../public/more-news-1.webp'
+import MoreNewsTwo from '../public/more-new-2.jpg'
+import MoreNewsThree from '../public/more-news-3.jpg'
+import MoreNewsFour from '../public/more-new-4.jpg'
 
 export default function News() {
     const news = [
@@ -11,7 +15,30 @@ export default function News() {
             link: `https://www.indiatoday.in/education-today/news/story/union-minister-gajendra-singh-inaugurates-centre-for-sustainable-drinking-water-at-iit-jodhpur-2004765-2022-09-26`,
             image: News1
 
-        }
+        },
+        {
+            image: MoreNewsOne,
+            excrept: `Despite lagging behind states, which have completed the target of supplying piped water to every household, Union Jal Shakti minister Gajendra Singh Shekhawat said the northeastern states have made significant progress in respect of the Jal Jeevan Mission (JJM) implementation. He hoped that most NE states will achieve the goal by 2024.`,
+            link: "https://timesofindia.indiatimes.com/city/guwahati/every-northeast-household-to-get-piped-water-under-jal-jeevan-mission-by-2024-union-minister-gajendra-singh-shekhawat/articleshow/101557530.cms?from=mdr",
+            title: "Every Northeast household to get piped water under Jal Jeevan Mission by 2024: Union minister Gajendra Singh Shekhawat",
+        },
+        {
+            image: MoreNewsTwo,
+            link: "https://www.indiatoday.in/india/story/india-committed-investments-of-over-240-bn-in-water-sector-union-jal-shakti-gajendra-singh-shekhawat-2350743-2023-03-24",
+            title: "India has committed investments of more than $240 billion in the water sector",
+            excrept: 'Union Jal Shakti Minister Gajendra Singh Shekhawat has said India has committed investments of more than 240 billion dollars in the water sector.'
+        },
+        {
+            image: MoreNewsThree,
+            link: "https://www.thehindu.com/education/namami-gange-signs-agreement-with-49-universities-to-inspire-youth-towards-water-conservation-river-rejuvenation/article66732281.ece",
+            excrept: 'Namami Gange signs agreement with 49 universities to inspire youth towards water conservation, river rejuvenation.The MoU aims to bring the student community to the forefront of the mass movement for creating a sustainable ecosystem of the river',
+            title: "Namami Gange signs agreement with 49 universities to inspire youth towards water conservation, river rejuvenation",
+        },
+        {
+            image: MoreNewsFour,
+            link: "https://bestcurrentaffairs.com/union-minister-for-jal-shakti-shri-gajendra-singh-shekhawat-jointly-launches-swachhata-hi-seva-2023-campaign/",
+            title: "Union Minister for Jal Shakti, Shri Gajendra Singh Shekhawat Jointly Launches Swachhata Hi Seva 2023 Campaign",
+        },
     ]
 
     const redirectToNews = (event: any, link: string) => {
@@ -41,7 +68,7 @@ export default function News() {
                         </div>
                     </div>)
                 })
-            }   
+            }
         </div>
     </>
 }
