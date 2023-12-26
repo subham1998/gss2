@@ -1,0 +1,59 @@
+// WorkDone.module.scss
+
+@mixin btn-css() {
+    background: none;
+    border: none;
+
+    i {
+        color: black;
+        font-size: 32px;
+    }
+}
+
+.pdfContainer {
+    position: relative;
+    width: 50%;
+    height: calc(100vh - 110px);
+    margin: 0 auto;
+    // display: flex;
+    // gap: 10px;
+    // height: 75vh;
+    /* Adjust the height as needed */
+}
+
+.pdfPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.pdfCanvas {
+    width: 100%;
+    height: 100% !important;
+    height: auto;
+}
+
+.prevButton,
+.nextButton {
+    top: 50%;
+
+    button {
+        @include btn-css();
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+}
+
+.nextButton {
+    right: 0;
+}
+
+.downloadButton {
+    right: 0;
+}
