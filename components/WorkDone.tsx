@@ -5,6 +5,7 @@ import Worker from 'pdfjs-dist/build/pdf.worker.min.mjs';
 import styles from './WorkDone.module.scss';
 
 const WorkDone = ({ pdfPath }: { pdfPath: any }) => {
+    const [isloading, setIsLoading] = useState<any>(true);
     const [pdfDocument, setPdfDocument] = useState<any>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
@@ -13,11 +14,13 @@ const WorkDone = ({ pdfPath }: { pdfPath: any }) => {
     useEffect(() => {
         const loadPdf = async () => {
             try {
+                setIsLoading(true)
                 pdfjs.GlobalWorkerOptions.workerSrc = Worker;
                 const loadingTask = pdfjs.getDocument(pdfPath);
                 const pdfDoc = await loadingTask.promise;
                 setPdfDocument(pdfDoc);
                 setTotalPages(pdfDoc.numPages);
+                setIsLoading(false)
             } catch (error) {
                 console.error('Error loading PDF:', error);
             }
@@ -90,25 +93,28 @@ const WorkDone = ({ pdfPath }: { pdfPath: any }) => {
                     <i className="fa-solid fa-backward"></i>
                 </button>
             </div>
-            <div className={styles.pdfContainer}>
-                {[...Array(totalPages)].map((_, index) => (
-                    <div
-                        key={index + 1}
-                        className={styles.pdfPage}
-                        style={{
-                            transform: `rotateY(0deg) scaleX(${currentPage === index + 1 ? '1' : '0'})`,
-                            width: '100%',
-                            height: '100%'
-                        }}
-                    >
-                        <canvas
-                            className={styles.pdfCanvas}
-                            id={`pdfCanvas${index + 1}`}
-                            ref={(canvas) => (canvasRefs.current[index] = canvas)}
-                        ></canvas>
-                    </div>
-                ))}
-            </div>
+            {isloading ?
+                <div className="spinner-grow" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div> : <div className={styles.pdfContainer}>
+                    {[...Array(totalPages)].map((_, index) => (
+                        <div
+                            key={index + 1}
+                            className={styles.pdfPage}
+                            style={{
+                                transform: `rotateY(0deg) scaleX(${currentPage === index + 1 ? '1' : '0'})`,
+                                width: '100%',
+                                height: '100%'
+                            }}
+                        >
+                            <canvas
+                                className={styles.pdfCanvas}
+                                id={`pdfCanvas${index + 1}`}
+                                ref={(canvas) => (canvasRefs.current[index] = canvas)}
+                            ></canvas>
+                        </div>
+                    ))}
+                </div>}
             <div className={`${styles.nextButton} position-absolute`}>
                 <button onClick={goToNextPage} disabled={currentPage === totalPages}>
                     <i className="fa-solid fa-forward"></i>
