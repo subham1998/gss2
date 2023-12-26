@@ -94,8 +94,8 @@ const WorkDone = ({ pdfPath }: { pdfPath: any }) => {
                 </button>
             </div>
             {isloading ?
-                <div className="spinner-grow" role="status">
-                    <span className="visually-hidden">Loading...</span>
+                <div className={`${styles.pdfContainer} text-dark`} role="status">
+                    <span className='position-absolute' style={{ top: "50%", left: "50%", transform: "translate(-50%, 0)" }}>Loading the Document...</span>
                 </div> : <div className={styles.pdfContainer}>
                     {[...Array(totalPages)].map((_, index) => (
                         <div
