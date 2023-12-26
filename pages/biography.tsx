@@ -21,6 +21,6 @@ export default function Biography() {
                 He was also instrumental in furthering the impact of civil defense by setting up 40 schools and 4 hostels along the Indo-Pak border. Extremely approachable on Social Media, he is massively popular on Twitter, Facebook and Youtube. Also has the distinction of being the most followed Indian Politician on Quora. His Quora profile has more than 70,000 followers and his answers on the social media platform has been viewed a record 6.8 Million times, more than that of former U.S.A President Barrack Obama.
                 As an example worth emulation, he led an internship program that leveraged his cult following on Quora to create a nationwide youth led development initiative, something that impressed the Prime Minister because of its unique approach towards problem solving for public policy issues and challenges.
             </div>
-            P</div>
+        </div>
     </div>)
 }
