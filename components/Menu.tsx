@@ -12,7 +12,7 @@ const menuCategories = [
     },
     {
         label: 'Achievements',
-        items: [{ label: 'Constituency', link: '#' }, { label: 'Ministry', link: "#" }, { label: 'Work Done in Constituency', link: '#' }]
+        items: [{ label: 'Constituency', link: '#' }, { label: 'Ministry', link: "#" }, { label: 'Work Done in Constituency', link: '/constitutency-work', target: '_Self' }]
     },
     {
         label: 'Connect',
