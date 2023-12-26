@@ -82,15 +82,14 @@ const WorkDone = ({ pdfPath }: { pdfPath: any }) => {
         <div className='position-relative'>
             <div className={`${styles.downloadButton} position-absolute`}>
                 <button type="button" className="btn btn-outline-secondary" onClick={handleDownload}>
-                    Download
-                    <i className="fa-solid fa-download ms-2"></i>
+                    <i className="fa-solid fa-download"></i>
                 </button>
             </div>
             <div className={`${styles.prevButton} position-absolute`}>
                 <button onClick={goToPreviousPage} disabled={currentPage === 1}>
                     <i className="fa-solid fa-backward"></i>
                 </button>
-                d</div>
+            </div>
             <div className={styles.pdfContainer}>
                 {[...Array(totalPages)].map((_, index) => (
                     <div
