@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: '',
   images: {
-    domains: ['img.youtube.com'],
+    domains: ['img.youtube.com', 'subham1998.github.io'],
   },
 }
 
