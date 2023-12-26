@@ -7,7 +7,7 @@ import MoreNews from '@/components/MoreNews'
 import TuneIn from '@/components/TuneIn'
 import MediaCarousel from '@/components/MediaCarousel'
 import Actions from '@/components/Actions'
-import GovernanceCarousel from '@/components/GovernanceCarousel'
+import ArticleCarousel from '@/components/Articles'
 import ConstituencyWork from '@/components/ConstituencyWork'
 import Summits from '@/components/Summits'
 
@@ -22,7 +22,7 @@ export default function Home() {
         {/* <MoreNews></MoreNews> */}
         <MediaCarousel></MediaCarousel>
         <Actions></Actions>
-        <GovernanceCarousel></GovernanceCarousel>
+        <ArticleCarousel></ArticleCarousel>
         <div className='row'>
           <div className='col-lg-6 col-md-12'>
             <ConstituencyWork></ConstituencyWork>
