@@ -16,7 +16,7 @@ const menuCategories = [
     },
     {
         label: 'Connect',
-        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Write to GSS', link: '#' }, { label: 'Be Part of GSS Family', link: '#' }]
+        items: [{ label: 'Contribute Thoughts/Opinions', link: '#' }, { label: 'Write to GSS', link: '/write-to-gss', target: '_self' }, { label: 'Be Part of GSS Family', link: '#' }]
     },
     {
         label: 'GSS Resources',

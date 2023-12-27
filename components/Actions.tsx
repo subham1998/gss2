@@ -23,7 +23,7 @@ const data = [
     {
         label: 'Write to GSS',
         image: WriteTo,
-        link: '#'
+        link: '/write-to-gss'
     },
     {
         label: 'GSS Library',
