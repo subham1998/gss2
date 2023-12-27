@@ -71,10 +71,6 @@ const Feedback = () => {
                 }
             }
 
-            // for (const pair of formData.entries()) {
-            //     console.log(pair[0] + ', ' + pair[1]);
-            // }
-
             // Make a POST request to your backend endpoint
             const response = await fetch('api/submit-feedback', {
                 method: 'POST',
@@ -215,56 +211,6 @@ const Feedback = () => {
             </Row>
         </Container>
     );
-
-    // const [name, setName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [message, setMessage] = useState('');
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     try {
-    //         const response = await fetch('/submit-feedback', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({ name, email, message }),
-    //         });
-
-    //         if (response.ok) {
-    //             console.log('Feedback submitted successfully!');
-    //         } else {
-    //             console.error('Failed to submit feedback.');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error submitting feedback:', error);
-    //     }
-    // };
-
-    // return (
-    //     <div className={`${styles['form-container']}`}>
-    //         <h1 className={`${styles['form-header']}`}>Write To Us</h1>
-    //         <form onSubmit={handleSubmit}>
-    //             <label>
-    //                 Name:
-    //                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-    //             </label>
-    //             <br />
-    //             <label>
-    //                 Email:
-    //                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-    //             </label>
-    //             <br />
-    //             <label>
-    //                 Message:
-    //                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-    //             </label>
-    //             <br />
-    //             <button type="submit">Submit</button>
-    //         </form>
-    //     </div>
-    // );
 };
 
 export default Feedback;
