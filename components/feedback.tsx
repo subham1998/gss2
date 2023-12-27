@@ -76,7 +76,7 @@ const Feedback = () => {
             // }
 
             // Make a POST request to your backend endpoint
-            const response = await fetch('/submit-feedback', {
+            const response = await fetch('api/submit-feedback', {
                 method: 'POST',
                 body: formData,
             });
