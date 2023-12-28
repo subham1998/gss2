@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Button, Container, Row, Col, FormGroup, FormLabel, FloatingLabel } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Container, Row, Col, FormGroup, FormLabel, FloatingLabel, Alert } from 'react-bootstrap';
 
 const initialValues = {
     firstName: '',
@@ -7,7 +8,7 @@ const initialValues = {
     email: '',
     phoneNumber: '',
     address: '',
-    opinionType: '',
+    opinionType: 'suggestion',
     suggestion: '',
     files: []
 };
@@ -51,7 +52,8 @@ const validate = (values: any) => {
 };
 
 const Feedback = () => {
-    const handleSubmit = async (values: any, { setSubmitting }: { setSubmitting: Function }) => {
+    const [showAlert, setShowAlert] = useState(false);
+    const handleSubmit = async (values: any, { setSubmitting, resetForm }: { setSubmitting: Function, resetForm: Function }) => {
         // Handle form submission logic here
         console.log(values);
         try {
@@ -80,6 +82,11 @@ const Feedback = () => {
             if (response.ok) {
                 // Handle successful submission (e.g., show success message)
                 console.log('Feedback submitted successfully');
+                resetForm();
+                setShowAlert(true);
+                setTimeout(() => {
+                    setShowAlert(false);
+                }, 5000);
             } else {
                 // Handle error response (e.g., show error message)
                 console.error('Error submitting Feedback:', response.statusText);
@@ -207,6 +214,11 @@ const Feedback = () => {
                             </Form>
                         )}
                     </Formik>
+                    {showAlert && (
+                        <Alert variant="success" className="position-fixed top-0 start-50 translate-middle-x">
+                            Thanks for submitting your valuable feedback. We will get back to you!
+                        </Alert>
+                    )}
                 </Col>
             </Row>
         </Container>
